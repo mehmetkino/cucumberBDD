@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
+
+    //we are created this bc we need this to read our configuration properties
     private static Properties configfile;
     //incapsulation for hiding data
 

@@ -32,5 +32,20 @@ public class Payment  extends BrowserUtils {
         CardNumber.sendKeys(cardnumber);
 
     }
+    public void setExpirationMonth( String exmonth){
+        staticWait(1);
+        ExpirationMonth.sendKeys(exmonth);
+    }
+    public void setExpirationYear(String exyear){
+        staticWait(1);
+        ExpirationYear.sendKeys(exyear);
+    }
+    public void setCvvCode(String code){
+        staticWait(1);
+        cvvCode.sendKeys(code);
+    }
+    public void setPayButton(){
+        PayButton.click();
+    }
 
 }

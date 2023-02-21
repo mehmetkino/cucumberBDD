@@ -3,6 +3,10 @@ package code.utils;
 import java.util.concurrent.TimeUnit;
 
 public class BrowserUtils extends Driver{
+
+    //We creating browserutils to store useful methods to achive more understanable coding experience
+    //for coding reausibility
+
     public static void staticWait(int second){
 
         try{

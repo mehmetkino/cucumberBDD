@@ -2,6 +2,7 @@ package code.stepDefinitons;
 
 import code.pages.Home;
 import code.pages.Payment;
+import code.pages.Verification;
 import code.utils.BrowserUtils;
 import code.utils.ConfigurationReader;
 import code.utils.Driver;
@@ -37,14 +38,24 @@ public class steps extends BrowserUtils {
 
         Payment payment= new Payment();
         payment.setCardNumber(dataTable.get("Cnumber"));
+        payment.setExpirationMonth(dataTable.get("Emonth"));
+        payment.setExpirationYear(dataTable.get("Eyear"));
+        payment.setCvvCode(dataTable.get("CVV"));
+
 
     }
     @Then("The user wants to pay now")
     public void the_user_wants_to_pay_now() {
+        Payment payment= new Payment();
+        payment.setPayButton();
 
     }
     @Then("The user wants to verify message as {string}")
-    public void the_user_wants_to_verify_message_as(String string) {
+    public void the_user_wants_to_verify_message_as(String expected) {
+        Verification verification= new Verification();
+        verification.setVerificationText(expected);
+
+
 
     }
 }
