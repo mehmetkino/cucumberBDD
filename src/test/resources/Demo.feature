@@ -9,4 +9,7 @@ Feature: Payment gate-way functional test
     |Eyear  |2026            |
     |CVV    |777             |
     Then The user wants to pay now
-    And The user wants to verify message as "Payment Successful!"
+    And The user wants to verify message as "Payment Successfull!"
+
+    #anything in double quotacion means paramater. so in this case
+    #"Payment Successful!" is a parameter
