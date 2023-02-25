@@ -3,12 +3,11 @@ package code.pages;
 import code.utils.BrowserUtils;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.devtools.v85.browser.Browser;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Verification extends BrowserUtils {
-    public Verification(){
+public class GatewayVerification extends BrowserUtils {
+    public GatewayVerification(){
         PageFactory.initElements(driver, this);
     }
 
