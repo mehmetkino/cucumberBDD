@@ -14,10 +14,11 @@ public class OrangeHRMHome extends BrowserUtils {
     @FindBy(xpath="//h1[.='Dashboard']")
     private WebElement VeriyingText;
 
+
+
     public void VeriyingText(){
 
         Assert.assertEquals("Dashboard", VeriyingText.getText());
-
 
     }
 
@@ -25,8 +26,10 @@ public class OrangeHRMHome extends BrowserUtils {
 
         Assert.assertEquals(str, VeriyingText.getText());
 
-
     }
+
+
+
 
 
 
