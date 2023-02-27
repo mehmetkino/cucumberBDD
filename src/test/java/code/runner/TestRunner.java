@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources", // this is the path for feature files //path from content root
         glue = "src/test/java/code/stepDefinitons",//this is path for steps // path from source root
-        tags= "@Testcase1", //without tags it will run everything that is present under feature file.When you put tags
+        tags= "@testcase1", //without tags it will run everything that is present under feature file.When you put tags
                         //it will only runs the tagged ones
-        dryRun =false//whn it is true it will check for undefinded steps, so it will give you snippets for undefined steps
+        dryRun =true//whn it is true it will check for undefinded steps, so it will give you snippets for undefined steps
 
 
 )
