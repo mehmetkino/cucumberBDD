@@ -41,10 +41,10 @@ Feature: Functional testing on Orange HRM
     Then The user wants to click on PIM module
     Then The user wants to go to add employee page
     Then The user wants to add employye's first and last name as fallowing
-      |FirstName| Gulsen    |
-      |LastName | Renastech |
+      |FirstName| Gulsene    |
+      |LastName | Renastecha |
     Then The user wants to add login details as fallowing
-      |UserName| Memocan147 |
+      |UserName| Memocan147s |
       |PassWord| 123@Gulsen|
       | Status | Disabled |
     Then The user wants to save the information

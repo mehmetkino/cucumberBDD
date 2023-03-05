@@ -1,17 +1,22 @@
 package code.runner;
+import io.cucumber.junit.Cucumber;
 
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources", // this is the path for feature files //path from content root
-        glue = "src/test/java/code/stepDefinitons",//this is path for steps // path from source root
-        tags= "@testcase1", //without tags it will run everything that is present under feature file.When you put tags
-                        //it will only runs the tagged ones
-        dryRun =true//whn it is true it will check for undefinded steps, so it will give you snippets for undefined steps
+        glue = "code/stepDefinitons",//this is path for steps // path from source root
+        tags= "@TESTCASE1",
+        dryRun = false,
+        plugin = {
+                "pretty", // this is to have more understandable console logs.
+                "rerun:target/rerun.txt",// this will help us to store failed scenarios in rerun.t
+                "html:target/default-cucumber-reports.html",
+                "json:target/cucumber.json"}
+
 
 
 )
