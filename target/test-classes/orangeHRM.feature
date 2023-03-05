@@ -1,5 +1,5 @@
 Feature: Functional testing on Orange HRM
-
+@Smoke
   Scenario: log-in OrangeHrm with correct credentials
     Given The user wants to go to Orange HRM website
     When The user wants to enter correct username
@@ -9,7 +9,7 @@ Feature: Functional testing on Orange HRM
 
     #@dryRunTest - i wanted to run it from runner class thats why i created a tag
     #i wanted to create by paramatizing
-  @dryRunTest
+  @dryRunTest @Smoke @Regression
   Scenario: log-in OrangeHrm with correct credentials
     Given The user wants to go to Orange HRM website
     When The user wants to enter correct username
@@ -18,7 +18,7 @@ Feature: Functional testing on Orange HRM
     And The user wants to verify that the browser launched on "Dashboard"
 
 
-
+ @Smoke
   Scenario: Adding a new employee
     Given The user wants to go to Orange HRM website
     When The user wants to enter correct username
