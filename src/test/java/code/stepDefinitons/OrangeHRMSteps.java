@@ -108,6 +108,7 @@ public class OrangeHRMSteps extends BrowserUtils {
 
         staticWait(2);
         orangeHRMHome.setFirstName(dataTable.get("FirstName"));
+
         staticWait(2);
         orangeHRMHome.setLastName(dataTable.get("LastName"));
 

@@ -7,10 +7,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.logging.Logger;
+
+
+
 public class OrangeHRMHome extends BrowserUtils {
     public OrangeHRMHome(){
         PageFactory.initElements(driver, this);
     }
+
+    private static final Logger logger=Logger.getLogger(String.valueOf(OrangeHRMHome.class));
+    //String of is not necessary but it was givin me error that's why i put this
+
 
     @FindBy(xpath="//h1[.='Dashboard']") private WebElement VeriyingText;
     @FindBy(xpath = "//a[@id='menu_pim_viewPimModule']") private WebElement PIM;
@@ -53,11 +61,15 @@ public class OrangeHRMHome extends BrowserUtils {
     public void setFirstName(String string){
 
         firstName.sendKeys(string);
+        logger.info(string + "it is succesfully entered");
+        System.out.println("first name is successfully enterd");
     }
 
     public void setLastName(String str){
 
         lastName.sendKeys(str);
+        logger.info(str +"It is perfectly entered");
+        System.out.println("Last name is successfully entered");
     }
 
     public void Save_Button()
@@ -87,6 +99,9 @@ public class OrangeHRMHome extends BrowserUtils {
     public void setStatusDropdown(String statusdropdown) {
         Select select= new Select(statusDropdown);
         select.selectByValue("Disabled");
+        logger.info(statusdropdown +"This is gets executed");//this is my check point it will check and give me inforamtion here
+                                                  //this will give me detailed explanation like line nuber etc year m..
+        System.out.println("disabled is successfully passed");
     }
     public void setVerify_Header(String string) {
 
